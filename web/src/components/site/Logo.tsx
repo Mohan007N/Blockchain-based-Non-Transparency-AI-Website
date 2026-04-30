@@ -1,13 +1,16 @@
-import { Shield } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 export function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2 group">
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-primary rounded-lg blur-md opacity-60 group-hover:opacity-100 transition-opacity" />
-        <div className="relative w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center">
-          <Shield className="w-5 h-5 text-primary-foreground" strokeWidth={2.5} />
+        <div className="absolute inset-0 rounded-lg blur-md opacity-60 group-hover:opacity-100 transition-opacity bg-white/20" />
+        <div className="relative w-10 h-10 flex items-center justify-center">
+          <img 
+            src="/images/LOGO.jpg" 
+            alt="VeritasAI Logo" 
+            className="w-full h-full object-contain transition-transform group-hover:scale-110 drop-shadow-lg"
+          />
         </div>
       </div>
       <span className="font-display font-bold text-lg tracking-tight">
