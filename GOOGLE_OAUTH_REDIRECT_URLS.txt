@@ -1,0 +1,93 @@
+═══════════════════════════════════════════════════════════════
+  GOOGLE OAUTH CONFIGURATION - REDIRECT URLS
+═══════════════════════════════════════════════════════════════
+
+CLIENT ID:
+608687632539-2o6insdcvhdb2i1bvq6k6mcqart8rfq3.apps.googleusercontent.com
+
+CLIENT SECRET:
+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
+
+═══════════════════════════════════════════════════════════════
+  STEP 1: GO TO GOOGLE CLOUD CONSOLE
+═══════════════════════════════════════════════════════════════
+
+1. Visit: https://console.cloud.google.com/apis/credentials
+2. Find your OAuth 2.0 Client ID
+3. Click "Edit" (pencil icon)
+
+═══════════════════════════════════════════════════════════════
+  STEP 2: ADD AUTHORIZED JAVASCRIPT ORIGINS
+═══════════════════════════════════════════════════════════════
+
+Add these URLs (one per line):
+
+http://localhost:8080
+http://localhost:5000
+
+═══════════════════════════════════════════════════════════════
+  STEP 3: ADD AUTHORIZED REDIRECT URIS
+═══════════════════════════════════════════════════════════════
+
+Add these URLs (one per line):
+
+http://localhost:5000/api/auth/google/callback
+http://localhost:8080/auth
+http://localhost:8080/auth/callback
+
+═══════════════════════════════════════════════════════════════
+  STEP 4: SAVE CHANGES
+═══════════════════════════════════════════════════════════════
+
+Click "SAVE" button at the bottom
+
+═══════════════════════════════════════════════════════════════
+  TESTING
+═══════════════════════════════════════════════════════════════
+
+1. Make sure both services are running:
+   - Backend: http://localhost:5000
+   - Frontend: http://localhost:8080
+
+2. Open browser: http://localhost:8080/auth
+
+3. Click "Continue with Google" button
+
+4. Authorize the application
+
+5. You should be redirected to dashboard
+
+═══════════════════════════════════════════════════════════════
+  FOR PRODUCTION (HTTPS)
+═══════════════════════════════════════════════════════════════
+
+Replace localhost URLs with your production domain:
+
+Authorized JavaScript Origins:
+https://yourdomain.com
+https://api.yourdomain.com
+
+Authorized Redirect URIs:
+https://api.yourdomain.com/api/auth/google/callback
+https://yourdomain.com/auth
+https://yourdomain.com/auth/callback
+
+═══════════════════════════════════════════════════════════════
+  CURRENT STATUS
+═══════════════════════════════════════════════════════════════
+
+✅ Backend configured with Google OAuth
+✅ Frontend configured with Google OAuth button
+✅ Database supports Google users
+✅ JWT token generation working
+✅ User creation/update working
+✅ Redirect flow implemented
+
+═══════════════════════════════════════════════════════════════
+  SERVICES RUNNING
+═══════════════════════════════════════════════════════════════
+
+Backend:  http://localhost:5000 ✅
+Frontend: http://localhost:8080 ✅
+
+═══════════════════════════════════════════════════════════════
